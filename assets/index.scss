@@ -1,0 +1,392 @@
+$colArr: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f;
+
+// 文本颜色
+@each $i in $colArr {
+	.color_#{$i} {
+		color: #{'#'}#{$i}#{$i}#{$i};
+	}
+
+	.bgc_#{$i} {
+		background-color: #{'#'}#{$i}#{$i}#{$i};
+	}
+}
+
+$radiuArr: 4,6,8,10,15,20;
+// 圆角
+@each $i in $radiuArr {
+	.radius_#{$i} {
+		border-radius: $i + rpx;
+	} 
+}
+/* #ifndef APP-NVUE */
+	.radiu_50 {
+		border-radius: 50%;
+	} 
+/* #endif */
+
+// 文本
+@for $i from 0 through 100 {
+	.fs_#{$i} {
+		font-size: $i + rpx;
+	}
+}
+
+// 内外边距
+@for $i from 0 through 100 {
+	.p_all#{$i} {
+		padding: $i + rpx;
+	}
+
+	.m_all#{$i} {
+		margin: $i + rpx;
+	}
+
+	.m_row#{$i} {
+		margin: 0 $i + rpx;
+	}
+
+	.m_col#{$i} {
+		margin: $i + rpx 0;
+	}
+
+	.p_row#{$i} {
+		padding: 0 $i + rpx;
+	}
+
+	.p_col#{$i} {
+		padding: $i + rpx 0;
+	}
+}
+
+@for $i from 0 through 100 {
+	.m_t#{$i} {
+		margin-top: $i + rpx;
+	}
+
+	.m_b#{$i} {
+		margin-bottom: $i + rpx;
+	}
+
+	.m_l#{$i} {
+		margin-left: $i + rpx;
+	}
+
+	.m_r#{$i} {
+		margin-right: $i + rpx;
+	}
+
+	.p_t#{$i} {
+		padding-top: $i + rpx;
+	}
+
+	.p_b#{$i} {
+		padding-bottom: $i + rpx;
+	}
+
+	.p_l#{$i} {
+		padding-left: $i + rpx;
+	}
+
+	.p_r#{$i} {
+		padding-right: $i + rpx;
+	}
+}
+
+.j_c_fs {
+	justify-content: flex-start;
+}
+
+.j_c_fe {
+	justify-content: flex-end;
+}
+
+.j_c_c {
+	justify-content: center;
+}
+
+.j_c_sa {
+	justify-content: space-around;
+}
+
+.j_c_bt {
+	justify-content: space-between;
+}
+
+.a_i_fs {
+	align-items: flex-start;
+}
+
+.a_i_fe {
+	align-items: flex-end; 
+}
+
+.a_i_c {
+	align-items: center;
+}
+
+.a_i_s {
+	align-items: stretch;
+}
+
+.f_d_c {
+	flex-direction: column;
+}
+
+.f_d_r {
+	flex-direction: row;
+}
+
+.f_w_w {
+	flex-wrap: wrap;
+}
+
+.flex1 {
+	flex: 1;
+	/* #ifndef APP-NVUE */
+	min-width: 0;
+	/* #endif */
+}
+
+.textl {
+	text-align: left;
+}
+
+.textc {
+	text-align: center;
+}
+
+.textr {
+	text-align: right;
+}
+
+.mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+}
+
+.button-hover {
+	background-color: transparent; 
+	opacity: 0.7;
+}
+
+// nvue
+.nvuepage {
+	
+	.j_c_fs {
+		justify-content: flex-start;
+	}
+
+	.j_c_fe {
+		justify-content: flex-end;
+	}
+
+	.j_c_c {
+		justify-content: center;
+	}
+
+	.j_c_sa {
+		justify-content: space-around;
+	}
+
+	.j_c_bt {
+		justify-content: space-between;
+	}
+
+	.a_i_fs {
+		align-items: flex-start;
+	}
+
+	.a_i_fe {
+		align-items: flex-end;
+	}
+
+	.a_i_c {
+		align-items: center;
+	}
+	
+	.a_i_s {
+		align-items: stretch;
+	}
+
+	.f_d_c {
+		flex-direction: column;
+	}
+
+	.f_d_r {
+		flex-direction: row;
+	}
+	
+	.f_w_w {
+		flex-wrap: wrap;
+	}
+
+	.flex1 {
+		flex: 1;
+	}
+}
+
+// nvue
+
+/* #ifndef APP-NVUE */
+.flex {
+	display: flex;
+}
+
+.f_h_0 {
+	flex-shrink: 0;
+}
+	
+.a_i_bl {
+	align-items: baseline
+}
+
+image {
+	vertical-align: middle;
+}
+
+$lineheightArr: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20;
+
+@each $i in $lineheightArr {
+	.lh_#{$i} {
+		line-height: $i / 10;
+	}
+}
+
+$fwArr: 40, 45, 50, 55, 60, 65, 70;
+
+@each $i in $fwArr {
+	.fw_#{$i} {
+		font-weight: $i*10;
+	}
+}
+
+@for $i from 0 through 100 {
+	.w_#{$i} {
+		width: $i * 1%;
+	}
+
+	.h_#{$i} {
+		height: $i * 1%;
+	}
+
+	.vw_#{$i} {
+		width: $i * 1vw;
+	}
+
+	.vh_#{$i} {
+		height: $i * 1vh;
+	}
+}
+
+.NWH {
+	align-items:stretch;//	即拉伸高度至 flex 容器的大小
+	/* #ifndef APP-NVUE */
+	height: 100%;
+	width: 100%;
+	/* #endif */
+}
+
+page {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: PingFang SC;
+}
+
+view,
+text,
+input,
+label,
+radio,
+image,
+picker,
+button,
+swiper,
+textarea,
+navigator,
+cover-view,
+picker-view,
+cover-image,
+match-media,
+swiper-item,
+scroll-view,
+radio-group,
+movable-view,
+movable-area,
+share-element,
+page-container,
+picker-view-column,
+keyboard-accessory { 
+	margin: 0;
+	font-family: PingFang SC;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+view::after,
+text::after,
+input::after,
+label::after,
+radio::after,
+image::after,
+picker::after,
+button::after,
+swiper::after,
+textarea::after,
+navigator::after,
+cover-view::after,
+picker-view::after,
+cover-image::after,
+match-media::after,
+swiper-item::after,
+scroll-view::after,
+radio-group::after,
+movable-view::after,
+movable-area::after,
+share-element::after,
+page-container::after,
+picker-view-column::after,
+keyboard-accessory::after {
+	margin: 0;
+	font-family: PingFang SC;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+/* #endif */
+
+/* 解决小程序和app滚动条的问题 */
+/* #ifdef MP-WEIXIN || APP-VUE */
+::-webkit-scrollbar {
+	display: none;
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+/* #endif */
+
+/* 解决H5 的问题 */
+/* #ifdef H5 */
+uni-scroll-view .uni-scroll-view::-webkit-scrollbar {
+	/* 隐藏滚动条，但依旧具备可以滚动的功能 */
+	display: none;
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+/* #endif */

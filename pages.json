@@ -1,0 +1,108 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充值优惠",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/msg/msg",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/block1/block1",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/block2/block2",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"subPackages": [],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"scrollIndicator": "none",
+		"app-plus": {
+			"bounce": "none",
+			"scrollIndicator": "none",
+			"softinputmode": "adjustPan"
+		}
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		// "color": "#C7C7C7",
+		// "selectedColor": "#2150CE",
+		"list": [
+			// {
+			// 	"iconPath": "static/tabbar/icon_home_unselected@2x.png",
+			// 	"selectedIconPath": "static/tabbar/icon_home_selected@2x.png",
+			// 	"pagePath": "pages/tabbar/index/index",
+			// 	"text": "首页"
+			// }
+			// {
+			// 	"iconPath": "static/tabbar/icon_detection_analysis_unselected@2x.png",
+			// 	"selectedIconPath": "static/tabbar/icon_detection_analysis_selected@2x.png",
+			// 	"pagePath": "pages/tabbar/analysis/analysis",
+			// 	"text": "监测分析"
+			// },
+			// {
+			// 	"iconPath": "static/tabbar/icon_mine_unselected@2x.png",
+			// 	"selectedIconPath": "static/tabbar/icon_mine_selected@2x.png",
+			// 	"pagePath": "pages/tabbar/mine/mine",
+			// 	"text": "我的"
+			// }
+		],
+		"color": "#9395A4",
+		"selectedColor": "#BE0000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/block1/block1",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/block2/block2",
+				"text": "个人中心"
+			}
+		]
+	}
+}
