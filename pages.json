@@ -35,7 +35,8 @@
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "个人中心",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{
