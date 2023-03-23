@@ -1,7 +1,24 @@
 <template>
 	<view>
-		<view class="u-page">
+		<view class="container">
 			<!-- 所有内容的容器 -->
+			<u-navbar :is-back="false" title=" " :border-bottom="false">
+				<u-tabs :list="tabsList" :is-scroll="false" :current="tabsCurrent" bg-color="#FFF"
+					active-color="#333333" @change="change" bar-width="45" bar-height="5" gutter="50"
+					inactive-color="#333333"></u-tabs>
+			</u-navbar>
+			<view class="content p_all28">
+				<view class="card">
+					<view class="card-item m_t20 p_t50 p_l50" style="height: 256rpx;" :style="{background: 'url(' +`/static/icons/card${index + 1}.png`+  ') center / 100% 100% no-repeat',color:!index ? '#758DAE' : index === 1  ? '#D96907': '#FFFFFF'}" v-for="(item,index) in 3" :key="index">
+						<view style="font-size: 80rpx;font-weight: bold;">
+							500 <text class="fs_48 m_l17">元</text>
+						</view>
+						<view class="fs_30 m_t10 m_l5">
+							到账1500元
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 		<!-- 与包裹页面所有内容的元素u-page同级，且在它的下 方 -->
 		<u-tabbar v-model="current" :list="list" :mid-button="true" icon-size="40" active-color="#BE0000"
@@ -40,16 +57,49 @@
 						text: '个人中心',
 					},
 				],
-				current: 1
+				current: 1,
+				tabsList: [{
+					name: '储值卡'
+				}, {
+					name: '卡券'
+				}, {
+					name: '兑换',
+				}],
+				tabsCurrent: 0
 			}
 		},
 		methods: {
 			beforeSwitch(index) {
-				if(index === 1)return
+				if (index === 1) return
 				this.navigateTo(['/pages/index/index', '/pages/recharge/recharge', '/pages/msg/msg', '/pages/order/order',
 					'/pages/user/user'
 				][index])
+			},
+			change(e) {
+				console.log(e);
+				this.tabsCurrent = e
 			}
+
 		}
 	}
 </script>
+<style scoped lang="scss">
+	.slot-wrap {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		padding: 0 30rpx;
+
+	}
+	.container{
+		min-height: 100vh;
+		background: #FCFCFC;
+	}
+
+	/deep/ .u-scroll-box {
+		width: 50vw;
+	}
+	/deep/ .u-slot-content{
+		padding-left: 28rpx;
+	}
+</style>

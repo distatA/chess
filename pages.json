@@ -14,7 +14,8 @@
 			"path": "pages/recharge/recharge",
 			"style": {
 				"navigationBarTitleText": "充值优惠",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
 		{

@@ -81,10 +81,10 @@
 					<view class="fs_30 color_3 p_t50 p_b20">
 						我的工具
 					</view>
-					<view class="flex a_i_c j_c_bt p_col40" style="border-bottom: 1rpx solid #F4F4F4;" v-for="(item,index) in 5">
-						<image src="@/static/icons/props1.png" style="width: 29rpx;height: 33rpx;"></image>
+					<view class="flex a_i_c j_c_bt p_col40" style="border-bottom: 1rpx solid #F4F4F4;" v-for="(item,index) in propsArr">
+						<image :src="`../../static/icons/props${index + 1}.png`" style="width: 30rpx;height: 30rpx;"></image>
 						<view class="flex1 m_row30 color_3 fs_30" >
-							团购验券
+							{{item}}
 						</view>
 						<u-icon name="arrow-right" color="#999999" size="24" style="margin-left: 13rpx;"></u-icon>
 					</view>
@@ -132,7 +132,8 @@
 				headInfo: {
 					opacity: 0
 				},
-				scr: ''
+				scr: '',
+				propsArr:['团购验券','分享奖励','WIFI连接','常见问题','联系商家',]
 			}
 		},
 		methods: {
@@ -166,5 +167,6 @@
 	}
 	.content{
 		padding: 22rpx 30rpx;
+		padding-top: 0;
 	}
 </style>
