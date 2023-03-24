@@ -103,7 +103,7 @@
 				console.log(index);
 				if (index === 0) return
 				this.navigateTo(['/pages/index/index', '/pages/recharge/recharge', '/pages/msg/msg', '/pages/order/order',
-					'/pages/index/index'
+					'/pages/user/user'
 				][index])
 			}
 		}
